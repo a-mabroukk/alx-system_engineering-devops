@@ -1,0 +1,2 @@
+#!/bin/bash
+chown -N vincent:staff _hello

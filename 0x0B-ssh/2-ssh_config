@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+# Configuring an SSH configuration file to enable local SSH client to connect to a server without typing a password
+Host 100.26.243.33
+    User ubuntu
+    IdentityFile ~/.ssh/school
+    StrictHostKeyChecking yes
+    PasswordAuthentication no

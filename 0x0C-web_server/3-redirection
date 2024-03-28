@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+# redirect
+apt-get -y update
+apt-get -y install nginx
+Redirect 301 /oldpage/ http://www.example.com/newpage/
+echo 'Hello World!' > /var/www/html/index.nginx-debian.html
+service nginx start

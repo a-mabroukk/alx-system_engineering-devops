@@ -1,9 +1,6 @@
 #!/usr/bin/env bash
-
 # Ensure Nginx is running
 sudo start nginx
-#Check Is it actually listening on this port
-sudo netstat -lpdn | grep 80
 sudo cp /etc/nginx/sites-available/default /etc/nginx/sites-available/default
 #Update the Nginx configuration to serve the content on the new port
 sed sed -i "s/8080/80/g" /etc/nginx/sites-available/default

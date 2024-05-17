@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 #Update the Nginx configuration to serve the content on the new port
+
 sed sed -i "s/8080/80/g" /etc/nginx/sites-available/default
 #restart Nginx after updating the configuration
 service nginx restart

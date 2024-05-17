@@ -1,8 +1,5 @@
 #!/usr/bin/env bash
 #command that used to fix the issue
-
-# Ensure Nginx is running
-sudo systemctl start nginx
 #Check Is it actually listening on this port
 sudo netstat -lpdn | grep 80
 #Update the Nginx configuration to serve the content on the new port

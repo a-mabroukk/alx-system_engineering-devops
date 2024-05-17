@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # Ensure Nginx is running
-sudo start nginx
+sudo systemctl start nginx
 #Check Is it actually listening on this port
 sudo netstat -lpdn | grep 80
 #Update the Nginx configuration to serve the content on the new port

@@ -1,5 +1,7 @@
-System has not been booted with systemd as init system (PID 1). Can't operate.
-Failed to connect to bus: Host is down
+sudo: start: command not found
 sudo: netstat: command not found
+cp: '/etc/nginx/sites-available/default' and '/etc/nginx/sites-available/default' are the same file
+sed: -e expression #1, char 3: unterminated `s' command
+ln: failed to create symbolic link '/etc/nginx/sites-enabled/default': File exists
  * Restarting nginx nginx
    ...done.

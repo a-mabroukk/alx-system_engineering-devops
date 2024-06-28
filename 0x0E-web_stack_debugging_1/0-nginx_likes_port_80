@@ -1,9 +1,17 @@
 #!/usr/bin/env bash
-# Ensure Nginx is running
-sudo start nginx
-#Check Is it actually listening on this port
-sudo netstat -lpdn | grep 8080
-#Update the Nginx configuration to serve the content on the new port
-sed -i "s/8080/80/g" /etc/nginx/sites-available/default
-#restart Nginx after updating the configuration
+# fix Ubuntu container's to listen on port 80
+
+new="80 default_server"
+old="8080 default_server"
+sed -i "s/$old/$new/" /etc/nginx/sites-enabled/default
+
 service nginx restart
+
+# Ensure Nginx is running
+#sudo start nginx
+#Check Is it actually listening on this port
+#sudo netstat -lpdn | grep 8080
+#Update the Nginx configuration to serve the content on the new port
+#sed -i "s/8080/80/g" /etc/nginx/sites-available/default
+#restart Nginx after updating the configuration
+#service nginx restart

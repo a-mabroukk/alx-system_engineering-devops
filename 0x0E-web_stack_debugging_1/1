@@ -1,4 +1,2 @@
-sudo: start: command not found
-sudo: netstat: command not found
  * Restarting nginx nginx
    ...done.
